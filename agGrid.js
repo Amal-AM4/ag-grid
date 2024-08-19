@@ -19,7 +19,11 @@ let rowData = [
 // Grid options
 const gridOptions = {
     columnDefs: columnDefs,
-    rowData: rowData
+    rowData: rowData,
+    defaultColDef: {
+        flex: 1,
+        minWidth: 100
+    }
 };
 
 // Initialize the grid

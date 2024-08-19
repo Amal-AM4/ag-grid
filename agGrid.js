@@ -13,7 +13,22 @@ let rowData = [
     { id: 2, name: "Priya Kumar", age: 32, position: "Product Manager", city: "Mumbai" },
     { id: 3, name: "Rajesh Gupta", age: 41, position: "Team Lead", city: "Delhi" },
     { id: 4, name: "Sunita Joshi", age: 35, position: "HR Manager", city: "Pune" },
-    { id: 5, name: "Kiran Desai", age: 28, position: "UX Designer", city: "Hyderabad" }
+    { id: 5, name: "Kiran Desai", age: 28, position: "UX Designer", city: "Hyderabad" },
+    { id: 1, name: "Amit Sharma", age: 29, position: "Software Engineer", city: "Bengaluru" },
+    { id: 2, name: "Priya Kumar", age: 32, position: "Product Manager", city: "Mumbai" },
+    { id: 3, name: "Rajesh Gupta", age: 41, position: "Team Lead", city: "Delhi" },
+    { id: 4, name: "Sunita Joshi", age: 35, position: "HR Manager", city: "Pune" },
+    { id: 5, name: "Kiran Desai", age: 28, position: "UX Designer", city: "Hyderabad" },
+    { id: 1, name: "Amit Sharma", age: 29, position: "Software Engineer", city: "Bengaluru" },
+    { id: 2, name: "Priya Kumar", age: 32, position: "Product Manager", city: "Mumbai" },
+    { id: 3, name: "Rajesh Gupta", age: 41, position: "Team Lead", city: "Delhi" },
+    { id: 4, name: "Sunita Joshi", age: 35, position: "HR Manager", city: "Pune" },
+    { id: 5, name: "Kiran Desai", age: 28, position: "UX Designer", city: "Hyderabad" },
+    { id: 1, name: "Amit Sharma", age: 29, position: "Software Engineer", city: "Bengaluru" },
+    { id: 2, name: "Priya Kumar", age: 32, position: "Product Manager", city: "Mumbai" },
+    { id: 3, name: "Rajesh Gupta", age: 41, position: "Team Lead", city: "Delhi" },
+    { id: 4, name: "Sunita Joshi", age: 35, position: "HR Manager", city: "Pune" },
+    { id: 5, name: "Kiran Desai", age: 28, position: "UX Designer", city: "Hyderabad" },
 ];
 
 // Grid options
@@ -23,8 +38,13 @@ const gridOptions = {
     defaultColDef: {
         flex: 1,
         minWidth: 100,
-        filter: true
-    }
+        filter: true,
+        floatingFilter: true
+    },
+    rowSelection: "multiple",
+    pagination: true,
+    paginationPageSize: 10,
+    paginationPageSizeSelector: [10, 20],
 };
 
 // Initialize the grid

@@ -35,7 +35,7 @@ let columnDefs = [
     { headerName: "Age", field: "age" },
     { headerName: "Position", field: "dept" },
     { headerName: "City", field: "city" },
-    { headerName: "DOB", field: "date", filter: "agDateColumnFilter",filterParams: filterParams },
+    { headerName: "DOB", field: "date", filter: "agDateColumnFilter", filterParams: filterParams },
 ];
 
 // sample row data for Indian employees

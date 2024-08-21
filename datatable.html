@@ -20,12 +20,15 @@
             background-color: #f2f2f2;
         }
     </style>
+
+    <link rel="stylesheet" href="dataTable/dataTables.dataTables.css">
+    <script src="jquery.min.js"></script>
 </head>
 <body>
 
     <h2>Student Marks Record</h2>
 
-    <table>
+    <table id="myTable">
         <thead>
             <tr>
                 <th>#</th>
@@ -42,7 +45,7 @@
             <!-- Sample records -->
             <tr>
                 <td>1</td>
-                <td>John Doe</td>
+                <td><input type="text" value="amal"></td>
                 <td>1001</td>
                 <td>85</td>
                 <td>78</td>
@@ -194,5 +197,18 @@
         </tbody>
     </table>
 
+
+    <script src="dataTable/dataTables.js"></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable({
+                paging: true,
+                pageLength: 10,
+                lengthChange: true,
+                searching: true
+            });
+        });
+    </script>
 </body>
 </html>

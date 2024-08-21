@@ -20,12 +20,12 @@ let rowData = [
 const gridOptions = {
     columnDefs: columnDefs,
     rowData: rowData,
-    defaultColDef: {
-        flex: 1,
-        minWidth: 100,
-        filter: true,
-        floatingFilter: true
-    },
+    // defaultColDef: {
+    //     flex: 1,
+    //     minWidth: 100,
+    //     filter: true,
+    //     floatingFilter: true
+    // },
     // rowSelection: "multiple",
     // pagination: true,
     // paginationPageSize: 10,

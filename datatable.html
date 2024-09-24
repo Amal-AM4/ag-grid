@@ -22,7 +22,11 @@
     </style>
 
     <link rel="stylesheet" href="dataTable/dataTables.dataTables.css">
-    <script src="jquery.min.js"></script>
+
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+
+    
 </head>
 <body>
 
@@ -45,7 +49,7 @@
             <!-- Sample records -->
             <tr>
                 <td>1</td>
-                <td><input type="text" value="amal"></td>
+                <td>amal</td>
                 <td>1001</td>
                 <td>85</td>
                 <td>78</td>
@@ -197,8 +201,15 @@
         </tbody>
     </table>
 
+    <script src="jquery.min.js"></script>
 
     <script src="dataTable/dataTables.js"></script>
+
+    <!-- DataTables Buttons JS and dependencies -->
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
 
     <script>
         $(document).ready( function () {
@@ -206,7 +217,22 @@
                 paging: true,
                 pageLength: 10,
                 lengthChange: true,
-                searching: true
+                ordering: true,
+                order: [[0, 'asc']],
+                searching: true,
+                info: true,
+                autoWidth: true,
+                responsive: true,
+                columnDefs: [
+                    { targets: 0, visible: false }, // Hide the first column
+                    { targets: 1, searchable: true } // Disable search for the second column
+                ],
+                dom: 'Blfrtip', // B stands for Buttons
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
+                processing: true,
+                fixedHeader: true,
             });
         });
     </script>
